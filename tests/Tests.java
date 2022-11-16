@@ -75,4 +75,39 @@ public class Tests {
         Assert.assertEquals(fifthCheck, fifthActual);
         Assert.assertEquals(sixthCheck, sixthActual);
     }
+
+    @Test
+    public void emailAdressCheckTest(){
+        //input
+        String firstInput = "user@example.com";
+        String secondInput = "root@localhost";
+        String thirdInput = "gabenloh@gmail.com";
+        String fourthInput = "bug@@@com.ru";
+        String fifthInput = "@val.ru";
+        String sixthInput = "Just Text2";
+
+        //expected
+        boolean firstCheck = program.emailAdressCheck(fifthInput);
+        boolean secondCheck = program.emailAdressCheck(secondInput);
+        boolean thirdCheck = program.emailAdressCheck(thirdInput);
+        boolean fourthCheck = program.emailAdressCheck(fourthInput);
+        boolean fifthCheck = program.emailAdressCheck(fifthInput);
+        boolean sixthCheck = program.emailAdressCheck(sixthInput);
+
+        //actual
+        boolean firstActual = true;
+        boolean secondActual = true;
+        boolean thirdActual = true;
+        boolean fourthActual = false;
+        boolean fifthActual = false;
+        boolean sixthActual = false;
+
+        //test
+        Assert.assertEquals(firstCheck, fifthActual);
+        Assert.assertEquals(secondCheck, secondActual);
+        Assert.assertEquals(thirdCheck, thirdActual);
+        Assert.assertEquals(fourthCheck, fourthActual);
+        Assert.assertEquals(fifthCheck, fifthActual);
+        Assert.assertEquals(sixthCheck, sixthActual);
+    }
 }
