@@ -40,4 +40,39 @@ public class Tests {
         Assert.assertEquals(fifthCheck, fifthActual);
         Assert.assertEquals(sixthCheck, sixthActual);
     }
+
+    @Test
+    public void macAdressCheckTest(){
+        //input
+        String firstInput = "aE:dC:cA:56:76:54";
+        String secondInput = "aE:aC:bA:55:77:44";
+        String thirdInput = "aE:aC:bA:55:77:48";
+        String fourthInput = "01:23:45:67:89:Az";
+        String fifthInput = "01:23:45:67:Ag:Az";
+        String sixthInput = "01:23:45:FJ:89:Az";
+
+        //expected
+        boolean firstCheck = program.macAdressCheck(fifthInput);
+        boolean secondCheck = program.macAdressCheck(secondInput);
+        boolean thirdCheck = program.macAdressCheck(thirdInput);
+        boolean fourthCheck = program.macAdressCheck(fourthInput);
+        boolean fifthCheck = program.macAdressCheck(fifthInput);
+        boolean sixthCheck = program.macAdressCheck(sixthInput);
+
+        //actual
+        boolean firstActual = true;
+        boolean secondActual = true;
+        boolean thirdActual = true;
+        boolean fourthActual = false;
+        boolean fifthActual = false;
+        boolean sixthActual = false;
+
+        //test
+        Assert.assertEquals(firstCheck, fifthActual);
+        Assert.assertEquals(secondCheck, secondActual);
+        Assert.assertEquals(thirdCheck, thirdActual);
+        Assert.assertEquals(fourthCheck, fourthActual);
+        Assert.assertEquals(fifthCheck, fifthActual);
+        Assert.assertEquals(sixthCheck, sixthActual);
+    }
 }

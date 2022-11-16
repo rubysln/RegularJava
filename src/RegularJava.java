@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 
 public class RegularJava {
-    @Test
     public boolean timeCheck(String line){
         String[] inputArray = line.split("\\s+");
         for(var e: inputArray){
