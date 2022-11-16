@@ -18,7 +18,7 @@ public class RegularJava {
         return line.matches("([A-Fa-f0-9]{2}:){5}[A-Fa-f0-9]{2}");
     }
     public boolean emailAdressCheck(String line){
-        return false;
+        return line.matches("([A-Za-z0-9]+@[^@].+\\.[a-z])|([A-Za-z0-9]+@[^@].+)");
     }
     public boolean passwordCheck(String line){
         return false;
