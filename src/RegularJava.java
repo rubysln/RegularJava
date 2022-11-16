@@ -21,6 +21,6 @@ public class RegularJava {
         return line.matches("([A-Za-z0-9]+@[^@].+\\.[a-z])|([A-Za-z0-9]+@[^@].+)");
     }
     public boolean passwordCheck(String line){
-        return false;
+        return line.matches("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9_]{8,}");
     }
 }
