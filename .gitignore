@@ -1,5 +1,5 @@
-out
-.idea
+out/
+.idea/
 junit-4.13.2.jar
 RegularJava.iml
 hamcrest-2.2.jar
