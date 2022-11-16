@@ -110,4 +110,39 @@ public class Tests {
         Assert.assertEquals(fifthCheck, fifthActual);
         Assert.assertEquals(sixthCheck, sixthActual);
     }
+
+    @Test
+    public void passwordCheckTest(){
+        //input
+        String firstInput = "C00l_Pass";
+        String secondInput = "SupperPas1";
+        String thirdInput = "Qwerty_1";
+        String fourthInput = "Cool_pass";
+        String fifthInput = "C00l";
+        String sixthInput = "justtest2";
+
+        //expected
+        boolean firstCheck = program.passwordCheck(fifthInput);
+        boolean secondCheck = program.passwordCheck(secondInput);
+        boolean thirdCheck = program.passwordCheck(thirdInput);
+        boolean fourthCheck = program.passwordCheck(fourthInput);
+        boolean fifthCheck = program.passwordCheck(fifthInput);
+        boolean sixthCheck = program.passwordCheck(sixthInput);
+
+        //actual
+        boolean firstActual = true;
+        boolean secondActual = true;
+        boolean thirdActual = true;
+        boolean fourthActual = false;
+        boolean fifthActual = false;
+        boolean sixthActual = false;
+
+        //test
+        Assert.assertEquals(firstCheck, fifthActual);
+        Assert.assertEquals(secondCheck, secondActual);
+        Assert.assertEquals(thirdCheck, thirdActual);
+        Assert.assertEquals(fourthCheck, fourthActual);
+        Assert.assertEquals(fifthCheck, fifthActual);
+        Assert.assertEquals(sixthCheck, sixthActual);
+    }
 }
