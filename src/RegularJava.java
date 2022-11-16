@@ -15,7 +15,7 @@ public class RegularJava {
         return false;
     }
     public boolean macAdressCheck(String line){
-        return false;
+        return line.matches("([A-Fa-f0-9]{2}:){5}[A-Fa-f0-9]{2}");
     }
     public boolean emailAdressCheck(String line){
         return false;
